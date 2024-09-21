@@ -1,7 +1,5 @@
 # React + Vite
 
-you have to use an Api and display the data in the form of card under a container. All the data points returned by the API should be converted to a card
-use this API: https://jsonplaceholder.typicode.com/posts
-
-Hint: Create a state for the data  which will be fetched using the json placeholder Api
-Inside useEfffect , use fectch to populate the state and then use map to render the cards from  that state
+learning about React Router!
+here we create a navbar with  the use of  createBrowserRouter,reactRouterProvider through which the page will not get load it directly shows the load output on clicking it.
+here we also uses a useparams to shows the users name content through writing on port and shows it on our page

@@ -1,15 +1,15 @@
 import React from 'react'
- import "./Navbar.css"
+import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
+  
   return (
     <div>
         <nav>
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
+           <NavLink className= {(e)=>{return e.isActive?"red": ""}} to="/About"><li>About</li></NavLink>
+           <NavLink className= {(e)=>{return e.isActive?"red": ""}} to="/Login"><li>Login</li></NavLink>
+           <NavLink className= {(e)=>{return e.isActive?"red": ""}}  to="/"><li>Home</li></NavLink>
+           
         </nav>
     </div>
   )

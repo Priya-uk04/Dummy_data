@@ -1,21 +1,40 @@
-import Footer from "./components/Footer"
-import Navbar from "./components/Navbar"
-import Card from "./components/Card"
+import { useEffect, useState,useRef } from 'react'
+import Navbar from './components/Navbar'
+import Home from './components/Home'
+import Login from './components/Login'
+import About from './components/About'
+import User from './components/User'
+import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 
+import './App.css'
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <><Navbar/><Home/></>
+    },
+    {
+      path: "/login",
+      element: <><Navbar/><Login/></>
+    },
+    {
+      path: "/About",
+      element: <><Navbar/><About/></>
+    },
+    {
+      path: "/user/:username",
+      element: <><Navbar/><User/></>
+    },
+  ])
+  
  
   return (
     <>
-     <Navbar/>
-    <div className="cards">
-      <Card title="card1" description= "card 1 desc"/>
-      <Card title="card2" description= "card 2 desc"/>
-      <Card title="card3" description= "card 3 desc"/>
-      <Card title="card4" description= "card 4 desc"/>   
-     
-    </div>
-     <Footer/>
+    
+    
+    <RouterProvider router={router} />
+   
     </>
   )
 }
